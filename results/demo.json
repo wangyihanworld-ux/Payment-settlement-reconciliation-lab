@@ -1,0 +1,118 @@
+{
+  "data_type": "synthetic",
+  "currency": "HKD",
+  "cutoff": "2026-10-03",
+  "ingestion_attempts": [
+    "accepted",
+    "accepted",
+    "accepted",
+    "duplicate"
+  ],
+  "settlement": {
+    "batches": [
+      {
+        "batch": "B1",
+        "expected_cents": 7700,
+        "bank_cents": 7700,
+        "status": "matched"
+      }
+    ],
+    "issues": [
+      {
+        "id": "C1",
+        "reason": "identical_duplicate_ignored"
+      }
+    ],
+    "accepted_events": [
+      {
+        "amount": 10000,
+        "batch": "B1",
+        "currency": "HKD",
+        "date": "2026-10-01",
+        "id": "C1",
+        "kind": "capture",
+        "order": "O1"
+      },
+      {
+        "amount": 2000,
+        "batch": "B1",
+        "capture_id": "C1",
+        "currency": "HKD",
+        "date": "2026-10-01",
+        "id": "R1",
+        "kind": "refund",
+        "order": "O1"
+      },
+      {
+        "amount": 300,
+        "batch": "B1",
+        "currency": "HKD",
+        "date": "2026-10-01",
+        "id": "F1",
+        "kind": "fee",
+        "order": "O1"
+      }
+    ]
+  },
+  "fulfillment": {
+    "lines": [
+      {
+        "line_id": "L1",
+        "order": "O1",
+        "sku": "DEMO-SKU",
+        "quantity": 5,
+        "unit_price_cents": 2000,
+        "currency": "HKD",
+        "shipped": 4,
+        "cancelled": 1,
+        "returned": 1,
+        "unfulfilled": 0,
+        "net_delivered": 3
+      }
+    ],
+    "accepted": [
+      {
+        "id": "S1",
+        "line_id": "L1",
+        "date": "2026-10-01",
+        "kind": "ship",
+        "quantity": 2
+      },
+      {
+        "id": "S2",
+        "line_id": "L1",
+        "date": "2026-10-02",
+        "kind": "ship",
+        "quantity": 2
+      },
+      {
+        "id": "CANCEL1",
+        "line_id": "L1",
+        "date": "2026-10-02",
+        "kind": "cancel",
+        "quantity": 1
+      },
+      {
+        "id": "RETURN1",
+        "line_id": "L1",
+        "date": "2026-10-03",
+        "kind": "return",
+        "quantity": 1,
+        "shipment_id": "S1"
+      }
+    ],
+    "issues": []
+  },
+  "order_review": [
+    {
+      "order": "O1",
+      "captured_cents": 10000,
+      "refunded_cents": 2000,
+      "cancellation_return_value_cents": 4000,
+      "unfulfilled_units": 0,
+      "logistics_requires_review": false,
+      "paid_but_unfulfilled": false,
+      "refund_review": true
+    }
+  ]
+}
