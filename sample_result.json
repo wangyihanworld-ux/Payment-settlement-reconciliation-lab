@@ -1,0 +1,30 @@
+{
+  "data": "synthetic",
+  "as_of_2026_10_02": {
+    "batches": [
+      {
+        "batch": "B1",
+        "expected_cents": 7700,
+        "bank_cents": null,
+        "status": "pending"
+      }
+    ],
+    "issues": []
+  },
+  "as_of_2026_10_03": {
+    "batches": [
+      {
+        "batch": "B1",
+        "expected_cents": 7700,
+        "bank_cents": 7700,
+        "status": "matched"
+      }
+    ],
+    "issues": [
+      {
+        "id": "C1",
+        "reason": "identical_duplicate_ignored"
+      }
+    ]
+  }
+}
