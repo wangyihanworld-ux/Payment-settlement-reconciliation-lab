@@ -2,7 +2,7 @@
 
 ## Confirmed human contribution
 
-The project owner supplied an accounting/finance background, described an internship observation that multi-warehouse visibility could improve, set the learning priorities and requested tested ECLT/FTDA extensions. No other human coding, debugging, test execution or user-testing contribution has yet been verified in this session.
+The project owner supplied the business context and learning priorities. In the earlier warehouse project, the owner reports personally preparing input tables, adjusting fee rates, organizing and entering warehouse charging rules, and manually spot-checking approximately 100 inbound/outbound records. This self-reported contribution has not been independently audited. It is not evidence of personally implementing or validating the new payment or stablecoin code, and it establishes no accuracy percentage. The new labs' independent reproduction remains pending.
 
 ## AI assistance in this revision
 
