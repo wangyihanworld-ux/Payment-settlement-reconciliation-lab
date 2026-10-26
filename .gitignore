@@ -4,3 +4,15 @@ __pycache__/
 *.db-journal
 .venv/
 .env
+
+# Local/private material must not be committed
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/private/
+/application-materials*/
+/review-*/
+/privacy-audit-*/
+/resume*/
