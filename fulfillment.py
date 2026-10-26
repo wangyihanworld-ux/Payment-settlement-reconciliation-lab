@@ -89,7 +89,9 @@ def order_cash_review(fulfillment_result, payment_events):
     totals = {}
     for line in fulfillment_result['lines']:
         value = totals.setdefault(line['order'], dict(captured_cents=0, refunded_cents=0,
+                                                     order_value_cents=0,
                                                      cancellation_return_value_cents=0, unfulfilled_units=0))
+        value['order_value_cents'] += line['quantity'] * line['unit_price_cents']
         value['cancellation_return_value_cents'] += (line['cancelled'] + line['returned']) * line['unit_price_cents']
         value['unfulfilled_units'] += line['unfulfilled']
     for row in payment_events:
@@ -99,6 +101,9 @@ def order_cash_review(fulfillment_result, payment_events):
             field = 'captured_cents' if row['kind'] == 'capture' else 'refunded_cents'
             totals[row['order']][field] += row['amount']
     return [{'order': key, **value,
+             'payment_status': ('overpaid_requires_review' if value['captured_cents'] > value['order_value_cents']
+                                else 'fully_captured' if value['captured_cents'] == value['order_value_cents']
+                                else 'partially_captured' if value['captured_cents'] else 'not_captured'),
              'logistics_requires_review': any(x['reason'] != 'identical_duplicate_ignored' for x in fulfillment_result['issues']),
              'paid_but_unfulfilled': value['captured_cents'] > value['refunded_cents'] and value['unfulfilled_units'] > 0,
              'refund_review': value['captured_cents'] > 0 and value['refunded_cents'] < value['cancellation_return_value_cents']}

@@ -108,8 +108,10 @@
       "order": "O1",
       "captured_cents": 10000,
       "refunded_cents": 2000,
+      "order_value_cents": 10000,
       "cancellation_return_value_cents": 4000,
       "unfulfilled_units": 0,
+      "payment_status": "fully_captured",
       "logistics_requires_review": false,
       "paid_but_unfulfilled": false,
       "refund_review": true
