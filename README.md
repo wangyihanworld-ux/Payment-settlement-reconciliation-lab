@@ -61,3 +61,8 @@ See [programme mapping](PROGRAMME_FIT.md) and [contribution boundaries](CONTRIBU
 - https://docs.stripe.com/refunds — original payment and partial refund concepts.
 
 These informed the educational design; the prototype does not implement Stripe's complete API or rules. All examples are original synthetic data.
+
+
+## 2026年10月26日复核
+
+本轮新增功能、规则来源和适用限制见 [复核记录](docs/review-20261026.md)。实现与自动测试有AI辅助，不能代表本人独立编写、用户试用或企业采用。历史测试数属于当时版本，本轮结果见交付证据。
