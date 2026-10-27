@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-27",
+  "tests": 35,
+  "subtests": 0,
+  "test_framework": "pytest",
+  "test_exit_code": 0,
+  "demo_exit_codes": {
+    "demo_flow": 0
+  },
+  "source_sha256_lf_normalized": {
+    "availability.py": "61f2aa6c3cf74ac03de4c0a0a268b3246d141059f5392a9f2bc2ec07046ed548",
+    "demo_flow.py": "d95225cb96f228ad15c60f52d8748d46ebea9d76cf9b27d47fc9d66d30899da4",
+    "event_store.py": "075de816a4f960b150ad9b7e0068a1931cc03c6acb05e0c58cb5309c605ad318",
+    "fulfillment.py": "3ae1ff520d7eac95482ef6803bc717414aabcb81ace8da339b361c6d69435e9f",
+    "reconcile.py": "b9dfbacf19fab16db662dff25c836ef2977289df04beeb7248922b00b360cd51",
+    "test_availability.py": "f475e071d89f622d83bfe109ff38c0572b985efea985e9ff7b054ff658feef74",
+    "test_fulfillment.py": "9dc16e3bef513c998af37c8871f27ccbae4c3b551c9e5557d02555fbaf7d580c",
+    "test_reconcile.py": "49541dc88f26551d46fa594def52e37a93ddb728e9f04f5212ee845f767438d1"
+  },
+  "limits": "AI-assisted local verification; not evidence of deployment, user acceptance or business outcomes."
+}

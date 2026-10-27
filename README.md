@@ -1,5 +1,7 @@
 # E-Commerce Order and Payment Reconciliation Lab
 
+[运行与最新验证](docs/validation-latest.md)
+
 An **AI-assisted, synthetic-data learning project**, connecting order-line fulfillment with payment settlement. No employer data, live payments or deployment.
 
 ## Business question
